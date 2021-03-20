@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap');
+
 .main {
-    width: 1024px;
-    align-items: center;
-    justify-content: center;
+    font-family: Kanit;
+    background-image: url(/assets/wp1852029.png);
+}
+
+
+.rodape {
 }

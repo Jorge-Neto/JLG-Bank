@@ -1,6 +1,11 @@
-.foot {
+.footer{
+    display: flex;
+    flex-direction: column;
+}
+
+.listas {
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: black;
+    font-size: 10px;
 }
