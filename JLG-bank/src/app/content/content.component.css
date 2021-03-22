@@ -1,3 +1,18 @@
+.wrapper-content {
+    width: 100vw;
+    height: 68vh;
+    z-index: -9999;
+    top: -60px;
+}
+
+.box-tile {
+    width: 70vw;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    padding: 10px;
+}
+
 .fundo{
     max-width: 100%;
 }

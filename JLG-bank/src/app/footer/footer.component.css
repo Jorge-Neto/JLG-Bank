@@ -1,11 +1,33 @@
-.footer{
+.foot{
     display: flex;
     flex-direction: column;
 }
 
-.listas {
-    display: flex;
+.lista {
+    padding: 30px;
+    border-top: 1px solid rgba(178, 190, 195,0.5);
+}
+
+.direitos {
+    text-align: center;
+}
+
+ul{
+    align-items: center;
+    justify-content: center;
+    
+    justify-content: space-around;
     flex-direction: row;
     align-items: center;
-    font-size: 10px;
+    font-size: 15px;
+    
+}
+
+li {
+    background-color: rgba(178, 190, 195,0.08);
+    color: #2d3436;
+}
+
+p {
+    background-color: rgba(178, 190, 195,0.1);
 }
