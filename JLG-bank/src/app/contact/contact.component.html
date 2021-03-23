@@ -1,29 +1,31 @@
+<!DOCTYPE html>
 <div class="container">
     <div class="row box-cadastro">
         <div class="col-12">
-            <h3 class="text-center">Quer falar com nóis?</h3>
+            <h3 class="text-center">Quer falar com a gente? &#9993;</h3>
             <form>
-                <div class="form-floating">
-                    <label for="nome" class="form-label">Nome</label>
-                    <input type="text" class="form-control cadastro" placeholder="Nome *" formControlName="nome">
+                <div class="form-group">
+                    <label for="nome" class="form-label">Nome: *</label>
+                    <input type="text" class="form-control" placeholder="Digite seu Nome" formControlName="nome">
                 </div>
 
-                <div class="form-floating">
-                    <label for="cpf">CPF <sub>(Digite apenas números)**</sub></label>
-                    <input type="text" class="form-control cadastro" placeholder="CPF *" formControlName="cpf"
-                        aria-describedby="cpfFeedback">
+                <div class="form-group">
+                    <label for="assunto" class="form-label">Assunto: *</label>
+                    <input type="text" class="form-control" placeholder="Assunto da mensagem" formControlName="assunto">
 
                 </div>
-                <div class="form-floating">
-                    <label for="email">Email</label>
-                    <input type="email" class="form-control cadastro" placeholder="E-mail *" formControlName="email"
-                        aria-describedby="emailFeedback">
+                <div class="form-group">
+                    <label for="email" class="form-label">Email: *</label>
+                    <input type="email" class="form-control" placeholder="exemplo@dominio.com.br" formControlName="email">
                 </div>
-                <label for="floatingTextarea2">Comments</label>
-                <textarea class="form-control cadastro" placeholder="Deixe a sua mensagem" id="floatingTextarea2" style="height: 100px"></textarea>
-                <br>
+                <div class="form-group">
+                    <label for="floatingTextarea2">Mensagem: *</label>
+                    <textarea class="form-control" placeholder="Deixe a sua mensagem" id="floatingTextarea2" style="height: 100px"></textarea>
+                </div>
+                <sub>* Campos obrigatórios</sub>
+                <br><br>
                 <div class="row">
-                    <button type="submit" class="btn btn-cadastro btn-success">Cadastrar</button>
+                    <button type="submit" class="btn btn-cadastro btn-success">Enviar</button>
                     <button type="button" class="btn btn-cadastro btn-light">Limpar</button>
 
                 </div>

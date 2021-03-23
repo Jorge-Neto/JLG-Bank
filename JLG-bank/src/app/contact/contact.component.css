@@ -1,17 +1,10 @@
 .box-cadastro {
-    margin: 30px;
+    margin: 30px 40px;
     padding: 30px;
-    background-color: #b9c0c4;
+    background-color: rgb(185, 192, 196, 0.5);
+    justify-content: center;
 }
 
-.cadastro {
-    padding: 10px;
-    border: none;
-    border-bottom: 2px solid #ddd;
-    border-radius: 0;
-    outline: none;
-    height: 50px;
-}
 
 .btn-cadastro {
     width: 30%;
@@ -19,4 +12,29 @@
     margin: 0 auto;
     padding: 10px;
     /* font-weight: bold; */
+}
+
+.form-group {
+    margin: 0px;
+}
+
+input {
+    margin-bottom: 5px;
+}
+
+input, #floatingTextarea2 {
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    border-radius: 0;
+    outline: none;
+    height: 50px;
+}
+label{
+    padding-left:5px;
+    margin: 0px;
+}
+
+sub {
+    padding-left: 5px;
 }

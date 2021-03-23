@@ -1,14 +1,14 @@
 .wrapper-content {
-    width: 100vw;
-    height: 90vh;
-    z-index: -9999;
-    top: -60px;
+    width: 98vw;
+    height: 68vh;
+    /* z-index: -9999; */
+    /* top: -60px; */
     justify-content: center;
     align-items: center;
 }
 
 .container {
-    padding: 30px 40px;
+    padding: 5px 5px 40px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -22,4 +22,13 @@
 .card{
     background-color: rgba(178, 190, 195,0.5);
     width: 18rem;
+}
+
+#botaoAzul {
+    background-color: #000431;
+    color: #EFEFEF;
+}
+
+#botaoAzul:hover {
+    background-color: #00011d;
 }
