@@ -1,12 +1,12 @@
 .box-cadastro {
-    margin: 30px 40px;
+    margin: 0px 40px;
     padding: 30px;
     background-color: rgb(185, 192, 196, 0.5);
     justify-content: center;
 }
 
 
-.btn-cadastro {
+#enviar, #limpar {
     width: 30%;
     display: block;
     margin: 0 auto;

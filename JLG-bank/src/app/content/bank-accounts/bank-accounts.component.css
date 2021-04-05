@@ -1,0 +1,23 @@
+.container {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.card {
+    background-color: rgba(178, 190, 195, 0.5);
+    width: 18rem;
+    border-radius: 1rem;
+}
+
+#botaoAzul {
+    background-color: #000431;
+    color: #EFEFEF;
+}
+
+#botaoAzul:hover {
+    background-color: #00011d;
+}
