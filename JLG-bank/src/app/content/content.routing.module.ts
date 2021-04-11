@@ -8,15 +8,17 @@ import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { BankAccountsComponent } from './bank-accounts/bank-accounts.component';
 import { RegisterComponent } from './bank-accounts/register/register.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 const contentRoutes: Routes = [
-    { path: 'register', component: RegisterComponent },
-    { path: 'login', component: LoginComponent },
-    { path: 'bank-accounts', component: BankAccountsComponent },
-    { path: 'about', component: AboutComponent },
-    { path: 'contact', component: ContactComponent },
-    { path: 'help', component: HelpComponent },
-    { path: '', component: ContentComponent },
+  { path: 'welcome', component: WelcomeComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'bank-accounts', component: BankAccountsComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'help', component: HelpComponent },
+  { path: '', component: ContentComponent },
 ];
 
 @NgModule({

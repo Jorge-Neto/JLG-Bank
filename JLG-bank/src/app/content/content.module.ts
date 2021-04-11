@@ -9,6 +9,7 @@ import { RegisterComponent } from './bank-accounts/register/register.component';
 import { ContactComponent } from './contact/contact.component';
 import { HelpComponent } from './help/help.component';
 import { LoginComponent } from './login/login.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { LoginComponent } from './login/login.component';
     ContactComponent,
     HelpComponent,
     LoginComponent,
+    WelcomeComponent
   ],
   imports: [
     CommonModule,

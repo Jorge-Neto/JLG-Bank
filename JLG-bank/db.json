@@ -1,0 +1,57 @@
+{
+  "planos": [
+    {
+      "id": 1,
+      "cartao": "./assets/imagens/cartao-azul.png",
+      "titulo": "Plano Blue",
+      "desc": [
+        "Sem taxas mensais",
+        "Crédito de até 1.500 reais",
+        "Cobertura nacional",
+        "Renda mínima não é exigida"
+      ]
+    },
+    {
+      "id": 2,
+      "cartao": "./assets/imagens/cartao-dourado.png",
+      "titulo": "Plano Gold",
+      "desc": [
+        "Taxa mensal de 22 reais",
+        "Crédito de até 3.000 reais",
+        "Cobertura nacional",
+        "Renda mínima exigida de 2.300 reais"
+      ]
+    },
+    {
+      "id": 3,
+      "cartao": "./assets/imagens/cartao-preto.png",
+      "titulo": "Plano Black",
+      "desc": [
+        "Taxa mensal de 54 reais",
+        "Crédito de até 7.000 reais",
+        "Cobertura internacional",
+        "Renda mínima exigida de 4.200 reais"
+      ]
+    }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "email": "admin@email.com",
+      "senha": "Admin@123*",
+      "privilegio": "adm"
+    },
+    {
+      "id": 2,
+      "email": "user@email.com",
+      "senha": "User@123*",
+      "privilegio": "standard"
+    },
+    {
+      "id": 3,
+      "email": "gabigol@email.com",
+      "senha": "Gabriel@123#",
+      "privilegio": "standard"
+    }
+  ]
+}
