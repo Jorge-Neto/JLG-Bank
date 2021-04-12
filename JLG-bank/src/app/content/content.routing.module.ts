@@ -11,10 +11,10 @@ import { RegisterComponent } from './bank-accounts/register/register.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 
 const contentRoutes: Routes = [
+  { path: 'bank-accounts', component: BankAccountsComponent },
   { path: 'welcome', component: WelcomeComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'bank-accounts', component: BankAccountsComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'help', component: HelpComponent },

@@ -1,4 +1,3 @@
-import { BuscarDadosService } from './../../dados/buscar-dados.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 
@@ -8,24 +7,15 @@ import { FormGroup } from '@angular/forms';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  
+
   formulario: FormGroup;
 
   nomePlano: String;
 
-  conta: string = "Plano Black"
-
-  constructor(private busca: BuscarDadosService) { }
+  conta: string;
 
   ngOnInit(): void {
-    this.formulario = this.busca.retornarForms();
-
+    // this.formulario = this.busca.retornarForms();
   }
 
-  getForm(){
-
-  }
-
-  limparFormulario() {
-  }
 }

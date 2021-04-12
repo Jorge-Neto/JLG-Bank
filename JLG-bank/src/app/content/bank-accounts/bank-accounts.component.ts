@@ -1,8 +1,9 @@
-import { BuscarDadosService } from './../dados/buscar-dados.service';
-import { Plano } from './../dados/planos';
-import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
+import { BuscarPlanosService } from './../buscarplanos.service';
+import { Plano } from '../dados/planos';
+//import { Input, Output, EventEmitter } from '@angular/core';
+// import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-bank-accounts',
@@ -13,22 +14,19 @@ export class BankAccountsComponent implements OnInit {
 
   // @Input() plano: Plano;
   // @Output() eventoDeClique: EventEmitter<> = new EventEmitter;
-  plano = [];
+  planos: Plano[];
 
-  constructor(
-    private router: Router,
-    private service: BuscarDadosService
-  ) { }
-
-  ngOnInit(): void {
-    this.service.retornarPlanos().subscribe ( planos =>
-      this.plano = planos )
+  constructor(private service: BuscarPlanosService, private router: Router) {
+    this.planos = [];
   }
 
-  irRegistrar(nomePlano: Plano) {
+  async ngOnInit(): Promise<void> {
+    this.planos = await this.service.listar()
+    console.log(this.planos);
+  }
+
+  irRegistrar(nome) {
     
-    // this.eventoDeClique.emit(nomePlano.titulo)
-    this.router.navigate(['/register']);
-    
+    this.router.navigate['/register'];
   }
 }

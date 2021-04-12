@@ -1,8 +1,7 @@
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { BuscarPlanosService } from './buscarplanos.service';
 
 import { ContentComponent } from './content.component';
 import { AboutComponent } from './about/about.component';
@@ -12,8 +11,8 @@ import { ContactComponent } from './contact/contact.component';
 import { HelpComponent } from './help/help.component';
 import { LoginComponent } from './login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { HttpClientModule } from '@angular/common/http';
 
-import { BuscarDadosService } from './dados/buscar-dados.service';
 
 @NgModule({
   declarations: [
@@ -29,10 +28,9 @@ import { BuscarDadosService } from './dados/buscar-dados.service';
   imports: [
     CommonModule,
     RouterModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule,
+  ], 
+  providers: [
+    BuscarPlanosService,
   ],
-  providers: [BuscarDadosService],
 })
 export class ContentModule { }

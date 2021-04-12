@@ -1,16 +1,15 @@
 <div class="container">
-    <div class="card" *ngFor="let item of plano">
-        <img src={{ plano.cartao }} class="card-img-top" alt="Cartao-do-plano">
+    <div class="card" *ngFor="let item of planos">
+        <img [src]="item.cartao" class="card-img-top" alt="Cartao-do-plano">
         <div class="card-body">
             <ul>
-                <h5 class="card-title">{{ plano.titulo }}</h5>
-                <li class="card-text">{{ plano.desc[0] }}</li>
-                <li class="card-text">{{ plano.desc[1] }}</li>
-                <li class="card-text">{{ plano.desc[2] }}</li>
-                <li class="card-text">{{ plano.desc[3] }}</li>
+                <h5 class="card-title">{{ item.titulo }}</h5>
+                <li class="card-text">{{ item.descUm }}</li>
+                <li class="card-text">{{ item.descDois }}</li>
+                <li class="card-text">{{ item.descTres }}</li>
+                <li class="card-text">{{ item.descQuatro }}</li>
             </ul>
-            <button class="btn" (click)="irRegistrar(plano)"> Tenho interesse !</button>
+            <button class="btn btn-success" (click)="irRegistrar(item.titulo)"> Tenho interesse !</button>
         </div>
     </div>
-
-</div>
+</div> 

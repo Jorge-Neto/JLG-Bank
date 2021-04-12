@@ -2,5 +2,8 @@ export interface Plano {
     id: number,
     cartao: string,
     titulo: string,
-    desc: object,
+    descUm: string,
+    descDois: string,
+    descTres: string,
+    descQuatro: string
 }

@@ -25,13 +25,13 @@ export class BuscarDadosService {
 
   constructor(private http: HttpClient) { }
 
-  //Retornar Planos
+// RetornarPlanos
   retornarPlanos(): Observable<Plano[]> {
     return this.http.get<Plano[]>(this.urlPlanos);
   }
 
 
-  //Usuarios
+// Usuarios
   resgistrarUsuario(usuario: Usuario): Observable<Usuario[]> {
     return this.http.post<Usuario[]>(this.urlUsuarios, usuario);
   }
