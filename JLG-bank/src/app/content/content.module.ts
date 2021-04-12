@@ -1,6 +1,8 @@
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { ContentComponent } from './content.component';
 import { AboutComponent } from './about/about.component';
@@ -11,6 +13,7 @@ import { HelpComponent } from './help/help.component';
 import { LoginComponent } from './login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 
+import { BuscarDadosService } from './dados/buscar-dados.service';
 
 @NgModule({
   declarations: [
@@ -26,6 +29,10 @@ import { WelcomeComponent } from './welcome/welcome.component';
   imports: [
     CommonModule,
     RouterModule,
-  ]
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+  ],
+  providers: [BuscarDadosService],
 })
 export class ContentModule { }

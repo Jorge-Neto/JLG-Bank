@@ -1,43 +1,16 @@
 <div class="container">
-    <div class="card">
-        <img src="./assets/imagens/cartao-azul.png" class="card-img-top" alt="Cartao-plano-blue">
+    <div class="card" *ngFor="let item of plano">
+        <img src={{ plano.cartao }} class="card-img-top" alt="Cartao-do-plano">
         <div class="card-body">
             <ul>
-                <h5 class="card-title">Plano blue</h5>
-                <li class="card-text">Sem taxas mensais</li>
-                <li class="card-text">Credito de até 1500 reais</li>
-                <li class="card-text">Cobertura nacional</li>
-                <li class="card-text">Renda minima não será exigida</li>
+                <h5 class="card-title">{{ plano.titulo }}</h5>
+                <li class="card-text">{{ plano.desc[0] }}</li>
+                <li class="card-text">{{ plano.desc[1] }}</li>
+                <li class="card-text">{{ plano.desc[2] }}</li>
+                <li class="card-text">{{ plano.desc[3] }}</li>
             </ul>
-            <button class="btn" id="botaoAzul" (click)="irRegistrar()"> Tenho interesse !</button>
+            <button class="btn" (click)="irRegistrar(plano)"> Tenho interesse !</button>
         </div>
     </div>
 
-    <div class="card">
-        <img src="./assets/imagens/cartao-dourado.png" class="card-img-top" alt="Cartao-plano-gold">
-        <div class="card-body">
-            <ul>
-                <h5 class="card-title">Plano Gold</h5>
-                <li class="card-text">Taxa mensal de 22 reais</li>
-                <li class="card-text">Credito de até 3000 reais</li>
-                <li class="card-text">Cobertura nacional</li>
-                <li class="card-text">Renda minima exigida de 2300 reais</li>
-            </ul>
-            <button class="btn btn-warning" (click)="irRegistrar()">Tenho interesse !</button>
-        </div>
-    </div>
-
-    <div class="card">
-        <img src="./assets/imagens/cartao-preto.png" class="card-img-top" alt="Cartao-plano-black">
-        <div class="card-body">
-            <ul>
-                <h5 class="card-title">Plano black</h5>
-                <li class="card-text">Taxa mensal de 54 reais</li>
-                <li class="card-text">Credito de até 7000 reais</li>
-                <li class="card-text">Cobertura internacional</li>
-                <li class="card-text">Renda minima exigida de 4200 reais</li>
-            </ul>
-            <button class="btn btn-dark" (click)="irRegistrar()">Tenho interesse !</button>
-        </div>
-    </div>
 </div>

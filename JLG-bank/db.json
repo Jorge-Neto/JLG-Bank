@@ -37,18 +37,27 @@
   "usuarios": [
     {
       "id": 1,
+      "nome": "Administrador",
+      "cpf": "123.456.789-10",
+      "renda": "R$50.000,00",
       "email": "admin@email.com",
       "senha": "Admin@123*",
       "privilegio": "adm"
     },
     {
       "id": 2,
+      "nome": "User",
+      "cpf": "019.876.543-21",
+      "renda": "R$1.000,00",
       "email": "user@email.com",
       "senha": "User@123*",
       "privilegio": "standard"
     },
     {
       "id": 3,
+      "nome": "Gabriel",
+      "cpf": "111.222.333-44",
+      "renda": "R$3.000,00",
       "email": "gabigol@email.com",
       "senha": "Gabriel@123#",
       "privilegio": "standard"
