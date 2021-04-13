@@ -27,6 +27,6 @@ export class BankAccountsComponent implements OnInit {
 
   irRegistrar(nome) {
     
-    this.router.navigate['/register'];
+    this.router.navigate(['/register']);
   }
 }
