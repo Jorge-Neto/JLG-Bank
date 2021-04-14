@@ -15,10 +15,10 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminComponent } from './admin/admin.component';
-import { EditarComponent } from './admin/produto/editar/editar.component';
-import { IncluirComponent } from './admin/produto/incluir/incluir.component';
-import { ExcluirComponent } from './admin/produto/excluir/excluir.component';
-import { ListarComponent } from './admin/produto/listar/listar.component';
+import { EditarComponent } from './admin/rotas/editar/editar.component';
+import { IncluirComponent } from './admin/rotas/incluir/incluir.component';
+import { ExcluirComponent } from './admin/rotas/excluir/excluir.component';
+import { ListarComponent } from './admin/rotas/listar/listar.component';
 
 
 @NgModule({

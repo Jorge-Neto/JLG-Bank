@@ -15,7 +15,7 @@ export class ContactComponent implements OnInit {
   }
 
   limpar(){
-    this.formulario.reset;
+    return this.formulario.reset;
   }
 
 }

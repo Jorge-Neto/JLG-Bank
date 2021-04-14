@@ -5,5 +5,5 @@ export interface Usuario {
     renda: string,
     email: string,
     senha: string,
-    privilegio: string,
+    privilegio: string
 }

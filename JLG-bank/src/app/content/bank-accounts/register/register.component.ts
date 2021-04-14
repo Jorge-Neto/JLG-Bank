@@ -10,7 +10,7 @@ export class RegisterComponent implements OnInit {
 
   formulario: FormGroup;
 
-  nomePlano: String;
+  nomePlano = '';
 
   conta: string;
 

@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  email = "admin@email.com";
-  senha = "Admin@123*";
+  email = 'admin@email.com';
+  senha = 'Admin@123*';
   constructor(
     private router: Router,
   ) { }

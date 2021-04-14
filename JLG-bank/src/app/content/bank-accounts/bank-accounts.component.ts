@@ -17,12 +17,11 @@ export class BankAccountsComponent implements OnInit {
   }
 
   async ngOnInit(): Promise<void> {
-    this.planos = await this.service.listar()
+    this.planos = await this.service.listar();
     console.log(this.planos);
   }
 
-  irRegistrar(nome) {
-    
+  irRegistrar() {
     this.router.navigate(['/register']);
   }
 }
