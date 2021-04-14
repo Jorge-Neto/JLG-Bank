@@ -9,16 +9,29 @@ import { AboutComponent } from './about/about.component';
 import { BankAccountsComponent } from './bank-accounts/bank-accounts.component';
 import { RegisterComponent } from './bank-accounts/register/register.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { AdminComponent } from './admin/admin.component';
+import { ListarComponent } from './admin/produto/listar/listar.component';
+import { IncluirComponent } from './admin/produto/incluir/incluir.component';
+import { EditarComponent } from './admin/produto/editar/editar.component';
+import { ExcluirComponent } from './admin/produto/excluir/excluir.component';
 
 const contentRoutes: Routes = [
   { path: 'bank-accounts', component: BankAccountsComponent },
-  { path: 'welcome', component: WelcomeComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'welcome', component: WelcomeComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'admin', component: AdminComponent,
+    children : [
+      { path: '', component: ListarComponent },
+      { path: 'incluir', component: IncluirComponent },
+      { path: 'editar/:id', component: EditarComponent },
+      { path: 'excluir/:id', component: ExcluirComponent }
+    ]},
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'help', component: HelpComponent },
   { path: '', component: ContentComponent },
+
 ];
 
 @NgModule({

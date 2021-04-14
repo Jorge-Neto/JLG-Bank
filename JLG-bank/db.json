@@ -13,19 +13,57 @@
       "id": 2,
       "cartao": "./assets/imagens/cartao-dourado.png",
       "titulo": "Plano Gold",
-      "descUm": "Taxa mensal de 22 reais", 
-      "descDois":"Crédito de até 3.000 reais",
-      "descTres":"Cobertura nacional",
-      "descQuatro":"Renda mínima exigida de 2.300 reais"    
+      "descUm": "Taxa mensal de 22 reais",
+      "descDois": "Crédito de até 3.000 reais",
+      "descTres": "Cobertura nacional",
+      "descQuatro": "Renda mínima exigida de 2.300 reais"
     },
     {
       "id": 3,
       "cartao": "./assets/imagens/cartao-preto.png",
       "titulo": "Plano Black",
       "descUm": "Taxa mensal de 54 reais",
-      "descDois":"Crédito de até 7.000 reais",
-      "descTres":"Cobertura internacional",
-      "descQuatro":"Renda mínima exigida de 4.200 reais"      
+      "descDois": "Crédito de até 7.000 reais",
+      "descTres": "Cobertura internacional",
+      "descQuatro": "Renda mínima exigida de 4.200 reais"
+    }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Administrador",
+      "cpf": "123.456.789-10",
+      "renda": "mais de 4,20k",
+      "email": "admin@email.com",
+      "senha": "Admin@123*",
+      "privilegio": "adm"
+    },
+    {
+      "id": 2,
+      "nome": "User",
+      "cpf": "019.876.543-21",
+      "renda": "menos de 3k",
+      "email": "user@email.com",
+      "senha": "User@123*",
+      "privilegio": "standard"
+    },
+    {
+      "id": 3,
+      "nome": "Gabriel",
+      "cpf": "111.222.333-44",
+      "renda": "igual a 3k",
+      "email": "gabigol@email.com",
+      "senha": "Gabriel@123#",
+      "privilegio": "standard"
+    },
+    {
+      "id": 4,
+      "nome": "Lucas",
+      "cpf": "444.333.222-11",
+      "renda": "mais de 4,20k",
+      "email": "raulin@email.com",
+      "senha": "Luquinhasl@420#",
+      "privilegio": "adm"
     }
   ]
 }

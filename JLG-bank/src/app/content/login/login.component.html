@@ -4,20 +4,20 @@
             <h3 class="text-center">Faça o seu login</h3>
             <form>
                 <div class="form-floating">
-                    <label for="user">Digite seu <strong>e-mail</strong> ou <strong>nome de usuário</strong></label>
-                    <input type="user" class="form-control cadastro" placeholder="user@exemplo.com" formControlName="user">
+                    <label for="inputEmail">Digite seu <strong>e-mail</strong> </label>
+                    <input type="text" class="form-control cadastro" placeholder="user@exemplo.com" formControlName="inputEmail">
                 </div>
                 <div class="form-floating">
                     <label for="senha">Digite a sua senha </label>
-                    <input type="password" class="form-control cadastro" formControlName="senha" placeholder="********">
+                    <input type="password" class="form-control cadastro" formControlName="inputSenha" placeholder="********">
                 </div>
                 <br>
                 <div>
-                    <button type="submit" class="btn btn-success" id="login">Login</button>
+                    <button type="button" class="btn btn-success" id="login" (click)="pageAdm()">Login</button>
                 </div>
                 <div class="container">
                     <p>Não tem uma conta?</p>
-                    <button type="button" class="btn btn-secondary btn-sm" id="registrar" (click)="irPlanos()">Registre-se</button>
+                    <button type="button" class="btn btn-secondary btn-sm" id="registrar" (click)="pageRgstr()">Registre-se</button>
                 </div>
             </form>
         </div>

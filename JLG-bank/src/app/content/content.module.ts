@@ -1,7 +1,8 @@
-import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { BuscarPlanosService } from './buscarplanos.service';
+import { BuscarClienteService } from '../services/buscarcliente.service';
+import { BuscarPlanosService } from '../services/buscarplanos.service';
 
 import { ContentComponent } from './content.component';
 import { AboutComponent } from './about/about.component';
@@ -13,6 +14,11 @@ import { LoginComponent } from './login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AdminComponent } from './admin/admin.component';
+import { EditarComponent } from './admin/produto/editar/editar.component';
+import { IncluirComponent } from './admin/produto/incluir/incluir.component';
+import { ExcluirComponent } from './admin/produto/excluir/excluir.component';
+import { ListarComponent } from './admin/produto/listar/listar.component';
 
 
 @NgModule({
@@ -24,14 +30,20 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ContactComponent,
     HelpComponent,
     LoginComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    AdminComponent,
+    EditarComponent,
+    IncluirComponent,
+    ExcluirComponent,
+    ListarComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
-  ], 
+  ],
   providers: [
     BuscarPlanosService,
+    BuscarClienteService
   ],
 })
 export class ContentModule { }

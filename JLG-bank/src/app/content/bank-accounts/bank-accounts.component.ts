@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { BuscarPlanosService } from './../buscarplanos.service';
+import { BuscarPlanosService } from 'src/app/services/buscarplanos.service';
 import { Plano } from '../dados/planos';
-//import { Input, Output, EventEmitter } from '@angular/core';
-// import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-bank-accounts',
@@ -12,8 +10,6 @@ import { Plano } from '../dados/planos';
 })
 export class BankAccountsComponent implements OnInit {
 
-  // @Input() plano: Plano;
-  // @Output() eventoDeClique: EventEmitter<> = new EventEmitter;
   planos: Plano[];
 
   constructor(private service: BuscarPlanosService, private router: Router) {
