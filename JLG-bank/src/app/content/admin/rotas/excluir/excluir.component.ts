@@ -26,9 +26,9 @@ export class ExcluirComponent implements OnInit {
 
   excluir(usuario: Usuario) {
     this.service.excluir(usuario.id).then(() => {
-      console.log('Usuario excluído');
       this.router.navigate(['/admin']);
     });
   }
+
 
 }

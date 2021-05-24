@@ -18,8 +18,7 @@
       <input disabled type="text" class="form-control" id="inputPrivilegio" placeholder="${{usuario.privilegio}}" name="privilegio" [(ngModel)]="usuario.privilegio">
     </div>
 
-
-    <button type="submit">Excluir</button>
+    <button type="submit" (click)="excluir(usuario)" >Excluir</button>
     <button routerLink="/admin">Cancelar</button>
 
   </form>
