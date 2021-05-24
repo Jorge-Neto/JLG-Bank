@@ -22,10 +22,10 @@ const contentRoutes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'admin', component: AdminComponent,
     children : [
-      { path: '', component: ListarComponent },
       { path: 'incluir', component: IncluirComponent },
+      { path: 'excluir/:id', component: ExcluirComponent },
       { path: 'editar/:id', component: EditarComponent },
-      { path: 'excluir/:id', component: ExcluirComponent }
+      { path: '', component: ListarComponent }
     ]},
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },

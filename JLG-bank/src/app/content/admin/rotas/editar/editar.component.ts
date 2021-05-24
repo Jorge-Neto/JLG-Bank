@@ -27,7 +27,6 @@ export class EditarComponent implements OnInit {
 
   atualizar(usuario : Usuario) {
     this.service.atualizarUsuario(usuario).then(() => {
-      console.log('Usuario atualizado');
       this.router.navigate(['/admin']);
     });
   }

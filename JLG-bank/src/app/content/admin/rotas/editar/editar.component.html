@@ -3,29 +3,22 @@
     <h2>Editar Usuário</h2>
     <div class="form-group">
       <label for="inputNome">Nome</label>
-      <input type="text" class="form-control" id="inputNome" aria-describedby="nomeHelp" [(placeholder)]="usuario.nome">
-
+      <input type="text" class="form-control" id="inputNome" placeholder="${{usuario.nome}}" name="nome" [(ngModel)]="usuario.nome">
     </div>
     <div class="form-group">
       <label for="inputCpf">CPF</label>
-      <input type="text" class="form-control" id="inputCpf" aria-describedby="cpfHelp" [(placeholder)]="usuario.cpf">
-
+      <input type="text" class="form-control" id="inputCpf" placeholder="${{usuario.cpf}}" name="cpf" [(ngModel)]="usuario.cpf">
     </div>
     <div class="form-group">
       <label for="inputEmail">E-mail</label>
-      <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp"
-        [(placeholder)]="usuario.email">
-
+      <input type="email" class="form-control" id="inputEmail" placeholder="${{usuario.email}}" name="email" [(ngModel)]="usuario.email">
     </div>
     <div class="form-group">
       <label for="inputPrivilegio">Privilegio</label>
-      <input type="text" class="form-control" id="inputPrivilegio" aria-describedby="privilegioHelp"
-        [(placeholder)]="usuario.privilegio">
-
+      <input type="text" class="form-control" id="inputPrivilegio" placeholder="${{usuario.privilegio}}" name="privilegio" [(ngModel)]="usuario.privilegio">
     </div>
 
     <button type="submit" (click)="atualizar(usuario)">Salvar</button>
     <button routerLink="/admin">Cancelar</button>
-
   </form>
 </div>
