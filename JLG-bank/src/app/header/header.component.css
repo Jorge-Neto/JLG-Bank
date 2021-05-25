@@ -1,7 +1,7 @@
 
 
 .logo{
-    max-width: 38px;
+    max-width: 40px;
 }
 
 .head {
@@ -14,13 +14,15 @@
 
 a {
     color: #EFEFEF;
-}
-
-.fade-nav-item{
-    opacity: 0.5;
     font-size: medium;
 }
 
-.fade-nav-item:hover{
+.nav-item-fade
+{
+    opacity: 0.5;
+}
+
+.nav-item-fade:hover
+{
     opacity: 1;
 }
