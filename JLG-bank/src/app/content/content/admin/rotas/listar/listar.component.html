@@ -1,0 +1,23 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome</th>
+      <th scope="col">CPF</th>
+      <th scope="col">E-mail</th>
+      <th scope="col">Ação</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let pessoa of usuario">
+    <tr>
+      <td> {{ pessoa.id }} </td>
+      <td> {{ pessoa.nome }}</td>
+      <td> {{ pessoa.cpf }}</td>
+      <td> {{ pessoa.email }}</td>
+      <td>
+        <a routerLink="/admin/editar/{{ pessoa.id }}">Editar</a>
+        <a routerLink="/admin/excluir/{{ pessoa.id }}">Excluir</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
