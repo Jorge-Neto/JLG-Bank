@@ -18,4 +18,8 @@ export class RegisterComponent implements OnInit {
     // this.formulario = this.busca.retornarForms();
   }
 
+  registrarUsuario() {
+    console.log();
+  }
+
 }

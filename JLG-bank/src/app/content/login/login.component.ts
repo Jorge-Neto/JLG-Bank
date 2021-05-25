@@ -21,6 +21,6 @@ export class LoginComponent implements OnInit {
     this.router.navigate(['/admin']);
   }
   pageRgstr() {
-    this.router.navigate(['/register']);
+    this.router.navigate(['/bank-accounts']);
   }
 }
