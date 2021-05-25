@@ -8,9 +8,20 @@
 }
 
 .conteudo {
+<<<<<<< Updated upstream
     padding: 5%;
 }
 
+=======
+<<<<<<< Updated upstream
+    padding: 50px;
+}
+=======
+    padding: 5%;
+}
+
+
+>>>>>>> Stashed changes
 /* .footer {
     align-items: center;
     position:fixed;
@@ -18,4 +29,9 @@
     width:100%;
     background-color: none;
     background-image: none;
+<<<<<<< Updated upstream
 } */
+=======
+} */
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
