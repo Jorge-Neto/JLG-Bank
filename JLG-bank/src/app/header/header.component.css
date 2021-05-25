@@ -15,3 +15,12 @@
 a {
     color: #EFEFEF;
 }
+
+.fade-nav-item{
+    opacity: 0.5;
+    font-size: medium;
+}
+
+.fade-nav-item:hover{
+    opacity: 1;
+}
