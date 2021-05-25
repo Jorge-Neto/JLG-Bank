@@ -1,11 +1,15 @@
 table {
   background-color: rgb(128, 128, 128, 0.5);
   color: #e2e2e2;
-
 }
 
 a {
   text-decoration: none;
   margin: 0;
   padding: 0px 10px;
+}
+
+.table{
+  margin: 120px 0px; 
+  
 }
