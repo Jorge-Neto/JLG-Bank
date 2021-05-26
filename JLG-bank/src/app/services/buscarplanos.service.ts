@@ -10,9 +10,7 @@ export class BuscarPlanosService extends HttpClient {
   constructor() {
     super('http://localhost:3000');
   }
-
   async listar(): Promise<Plano[]> {
     return (await this.instance.get<Plano[]>('/accounts/'))
   }
-
 }
