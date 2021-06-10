@@ -1,9 +1,10 @@
 export interface Usuario {
-    id: number,
+    codigo: number,
     nome: string,
     cpf: string,
     renda: string,
     email: string,
     senha: string,
-    privilegio: string
+    privilegio: string,
+    planoId: number
 }

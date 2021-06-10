@@ -1,5 +1,5 @@
 export interface Plano {
-    id: number,
+    codigo: number,
     cartao: string,
     titulo: string,
     descUm: string,
