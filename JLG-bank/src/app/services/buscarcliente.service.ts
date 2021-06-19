@@ -12,19 +12,19 @@ export class BuscarClienteService extends HttpClient {
     super('http://localhost:3000/');
   }
   async listarUsuarios(): Promise<Usuario[]> {
-    return (await this.instance.get<Usuario[]>('users'));
+    return (await this.instance.get<Usuario[]>('auth'));
   }
   async buscarPorCodigo(codigo: number): Promise<Usuario> {
-    return (await this.instance.get<Usuario>('users/' + codigo));
+    return (await this.instance.get<Usuario>('auth/' + codigo));
   }
   async criarUsuario(usuario: Usuario): Promise<Usuario> {
-    return (await this.instance.post<Usuario>('users', usuario));
+    return (await this.instance.post<Usuario>('auth', usuario));
   }
   async atualizarUsuario(usuario: Usuario): Promise<Usuario> {
     let codigo = usuario.codigo;
-    return (await this.instance.put<Usuario>(`users/${codigo}`, usuario));
+    return (await this.instance.put<Usuario>(`auth/${codigo}`, usuario));
   }
   async excluir(codigo: number): Promise<Usuario> {
-    return (await this.instance.delete<Usuario>('users/' + codigo));
+    return (await this.instance.delete<Usuario>('auth/' + codigo));
   }
  }
