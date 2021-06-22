@@ -1,5 +1,7 @@
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from './../../auth/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -8,18 +10,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  email = 'admin@email.com';
-  senha = 'Admin@123*';
+  formLogin: FormGroup;
+
   constructor(
-    private router: Router,
-  ) { }
+    private router: Router, private service: AuthService, private fb: FormBuilder
+  ) {
+    this.formLogin = this.fb.group({
+      email: this.fb.control('', [Validators.required, Validators.email]),
+      senha: this.fb.control('', [Validators.required])
+    });
+
+  }
 
   ngOnInit(): void {
   }
 
-  pageAdm() {
-    this.router.navigate(['/admin']);
+  onSubmit() {
+    const dadoEmail = this.formLogin.value.email
+    const dadoSenha = this.formLogin.value.senha
+
+    const token = this.service.login(dadoEmail, dadoSenha);
+    console.log(token);
+
+    // if (!token) {
+    //   alert("É necessário fornecer dados para login");
+    // };
+      // this.router.navigate(['/admin']);
   }
+
   pageRgstr() {
     this.router.navigate(['/bank-accounts']);
   }

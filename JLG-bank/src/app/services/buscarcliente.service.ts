@@ -27,4 +27,4 @@ export class BuscarClienteService extends HttpClient {
   async excluir(codigo: number): Promise<Usuario> {
     return (await this.instance.delete<Usuario>('auth/' + codigo));
   }
- }
+}

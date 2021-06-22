@@ -20,7 +20,7 @@ export class EditarComponent implements OnInit {
 
   ngOnInit(): void {
     const str = this.route.snapshot.paramMap.get('id');
-    this.service.buscarPorId(Number(str)).then( usuario => {
+    this.service.buscarPorCodigo(Number(str)).then( usuario => {
       this.usuario = usuario;
     });
   }

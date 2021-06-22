@@ -6,5 +6,6 @@ export interface Usuario {
     email: string,
     senha: string,
     privilegio: string,
-    planoId: number
+    planoId: number,
+    dtaCriacao: string
 }
