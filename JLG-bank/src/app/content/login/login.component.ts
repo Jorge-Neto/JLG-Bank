@@ -1,7 +1,9 @@
 import { Router } from '@angular/router';
-import { Component, OnInit } from '@angular/core';
+import { Component, Injectable, OnInit, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from './../../auth/auth.service';
+
+@Injectable({providedIn: 'root'})
 
 @Component({
   selector: 'app-login',
@@ -9,6 +11,8 @@ import { AuthService } from './../../auth/auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+
+  static emitirClienteCriado = new EventEmitter<string>();
 
   formLogin: FormGroup;
 
@@ -28,6 +32,7 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     const dadoEmail = this.formLogin.value.email
     const dadoSenha = this.formLogin.value.senha
+    LoginComponent.emitirClienteCriado.emit(dadoEmail);
 
     const token = this.service.login(dadoEmail, dadoSenha);
     console.log(token);
