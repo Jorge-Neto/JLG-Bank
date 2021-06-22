@@ -1,6 +1,8 @@
-import { Router } from '@angular/router';
 import { Component, Injectable, OnInit, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+
+
 import { AuthService } from './../../auth/auth.service';
 
 @Injectable({providedIn: 'root'})
@@ -40,7 +42,7 @@ export class LoginComponent implements OnInit {
     // if (!token) {
     //   alert("É necessário fornecer dados para login");
     // };
-      // this.router.navigate(['/admin']);
+      this.router.navigate(['/admin']);
   }
 
   pageRgstr() {
