@@ -14,6 +14,7 @@ export class RegisterComponent implements OnInit {
 
   usuario: Usuario;
   plano: Plano;
+  confirmSenha = "";
 
   constructor(
     private serviceCliente: BuscarClienteService,
@@ -29,6 +30,13 @@ export class RegisterComponent implements OnInit {
   }
 
   async registrarUsuario(usuario: Usuario){
+    console.log(usuario.senha);
+    if (usuario.senha === null || usuario.senha === undefined ) {
+      return alert("Você precisa digitar uma senha!");
+    } else if (usuario.senha != this.confirmSenha) {
+      return alert("As senhas precisam ser iguais!");
+    }
+
     this.usuario.privilegio = 'standard';
 
     if (usuario.renda === 'mais de 4,20k') {
