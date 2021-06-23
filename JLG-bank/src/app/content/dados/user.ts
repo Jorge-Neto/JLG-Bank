@@ -6,7 +6,7 @@ export class Usuario {
     email: string;
     senha: string;
     privilegio: string;
-    planoId: number;
+    accountId: number;
     token: string;
     dtaCriacao: Date = new Date();
 }

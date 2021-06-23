@@ -15,6 +15,6 @@ export class BuscarPlanosService extends HttpClient {
   }
 
   async buscarPorCodigo(codigo: number): Promise<Plano> {
-    return (await this.instance.get<Plano>('users/' + codigo));
+    return (await this.instance.get<Plano>('accounts/' + codigo));
   }
 }

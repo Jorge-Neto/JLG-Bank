@@ -1,8 +1,9 @@
+import { BuscarPlanosService } from 'src/app/services/buscarplanos.service';
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { BuscarClienteService } from 'src/app/services/buscarcliente.service';
 import { Usuario } from '../../dados/user';
+import { Plano } from './../../dados/planos';
 
 @Component({
   selector: 'app-register',
@@ -11,25 +12,44 @@ import { Usuario } from '../../dados/user';
 })
 export class RegisterComponent implements OnInit {
 
-  // formulario: FormGroup;
-  // nomePlano = '';
-  // conta: string;
   usuario: Usuario;
+  plano: Plano;
 
-  constructor(private service: BuscarClienteService, private router: Router) {
+  constructor(
+    private serviceCliente: BuscarClienteService,
+    private serviceConta: BuscarPlanosService,
+    private router: Router) {
     this.usuario = {} as Usuario;
   }
 
   ngOnInit(): void {
-    // this.formulario = this.busca.retornarForms();
+    localStorage.setItem('usuarioNome', '');
+    localStorage.setItem('usuarioConta', '');
+
   }
 
-  registrarUsuario(usuario: Usuario) {
+  async registrarUsuario(usuario: Usuario){
     this.usuario.privilegio = 'standard';
-    this.service.criarUsuario(usuario).then(() => {
-      console.log(`${usuario.nome} criado!`);
-      this.router.navigate(['/admin']);
-    });
-  }
 
+    if (usuario.renda === 'mais de 4,20k') {
+      usuario.accountId = 3;
+    } else if (usuario.renda === 'igual a 3k') {
+      usuario.accountId = 2;
+    } else if (usuario.renda === 'menos de 3k') {
+      usuario.accountId = 1;
+    } else {
+      return alert('Você deve selecionar uma renda!');
+    }
+
+    await this.serviceCliente.criarUsuario(usuario).then(() => {
+      console.log(`${usuario.nome} criado!`);
+    });
+
+    await this.serviceConta.buscarPorCodigo(usuario.accountId).then((plano) => {
+      localStorage.setItem('usuarioNome', usuario.nome);
+      localStorage.setItem('usuarioConta', plano.titulo);
+    });
+
+    this.router.navigate(['/welcome']);
+  }
 }

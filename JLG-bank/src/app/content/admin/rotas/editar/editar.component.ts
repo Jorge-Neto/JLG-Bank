@@ -3,7 +3,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { BuscarClienteService } from 'src/app/services/buscarcliente.service';
 import { Usuario } from 'src/app/content/dados/user';
 
-
 @Component({
   selector: 'app-editar',
   templateUrl: './editar.component.html',
@@ -20,8 +19,10 @@ export class EditarComponent implements OnInit {
   ngOnInit(): void {
     const str = this.route.snapshot.paramMap.get('id');
     this.service.buscarPorCodigo(Number(str)).then(usuario => {
+      console.log(usuario);
       this.usuario = usuario;
     });
+    
   }
 
   atualizar(usuario: Usuario) {

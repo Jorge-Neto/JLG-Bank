@@ -1,8 +1,6 @@
-import { BuscarClienteService } from 'src/app/services/buscarcliente.service';
-import { Usuario } from 'src/app/content/dados/user';
-import { Router, ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { LoginComponent } from '../login/login.component';
+import { Router } from '@angular/router';
+import { BuscarClienteService } from 'src/app/services/buscarcliente.service';
 
 @Component({
   selector: 'app-welcome',
@@ -10,18 +8,15 @@ import { LoginComponent } from '../login/login.component';
   styleUrls: ['./welcome.component.css']
 })
 export class WelcomeComponent implements OnInit {
+  nome: String;
+  NomePlano: String;
 
-  usuario: Usuario;
-
-  constructor(private service: BuscarClienteService, private router: Router, private route: ActivatedRoute) {
-    this.usuario = {} as Usuario;
+  constructor(private service: BuscarClienteService, private router: Router) {
   }
 
   ngOnInit() {
-    const str = this.route.snapshot.paramMap.get('id');
-    this.service.buscarPorCodigo(Number(str)).then(usuario => {
-      this.usuario = usuario;
-    });
+    this.nome = localStorage.getItem('usuarioNome');
+    this.NomePlano = localStorage.getItem('usuarioConta');
   }
-
 }
+

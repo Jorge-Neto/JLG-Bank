@@ -5,10 +5,12 @@
     background-image: url(/assets/imagens/background.jpg);
     background-size: cover;
     color: black;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
 }
 
 .conteudo {
- 
     padding: 5%;
 }
 

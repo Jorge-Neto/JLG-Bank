@@ -10,13 +10,15 @@
   </thead>
   <tbody *ngFor="let pessoa of usuario">
     <tr>
-      <td> {{ pessoa.id }} </td>
+      <td> {{ pessoa.codigo }} </td>
       <td> {{ pessoa.nome }}</td>
       <td> {{ pessoa.cpf }}</td>
       <td> {{ pessoa.email }}</td>
       <td>
-        <a routerLink="/admin/editar/{{ pessoa.id }}">Editar</a>
-        <a routerLink="/admin/excluir/{{ pessoa.id }}">Excluir</a>
+        <button type="button" class="btn btn-success btn-sm"
+        (click)="pageEditar(pessoa.codigo)">Editar</button>
+        <button type="button" class="btn btn-danger btn-sm"
+        (click)="pageExcluir(pessoa.codigo)">Excluir</button>
       </td>
     </tr>
   </tbody>

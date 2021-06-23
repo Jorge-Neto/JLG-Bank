@@ -16,7 +16,8 @@ export class AuthService extends HttpClient {
     this.instance.defaults.headers['Authorization'] = `Bearer ${data.token}`;
     localStorage.setItem(`token`, data.token);
     localStorage.setItem(`Privilegio`, data.privilegio);
-    console.log(data);
+    localStorage.setItem(`usuarioNome`, data.nome);
+    // console.log(data);
     return data;
   }
 }

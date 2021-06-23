@@ -17,16 +17,16 @@ import { ExcluirComponent } from './admin/rotas/excluir/excluir.component';
 
 const contentRoutes: Routes = [
   { path: 'bank-accounts', component: BankAccountsComponent },
+  { path: 'admin', component: AdminComponent,
+    children : [
+      { path: 'editar/:id', component: EditarComponent },
+      { path: 'excluir/:id', component: ExcluirComponent },
+      { path: 'incluir', component: IncluirComponent },
+      { path: '', component: ListarComponent }
+    ]},
   { path: 'register', component: RegisterComponent },
   { path: 'welcome', component: WelcomeComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'admin', component: AdminComponent,
-    children : [
-      { path: 'incluir', component: IncluirComponent },
-      { path: 'excluir/:id', component: ExcluirComponent },
-      { path: 'editar/:id', component: EditarComponent },
-      { path: '', component: ListarComponent }
-    ]},
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'help', component: HelpComponent },

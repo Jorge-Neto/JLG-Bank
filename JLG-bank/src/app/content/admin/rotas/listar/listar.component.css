@@ -1,6 +1,7 @@
 table {
   background-color: rgb(128, 128, 128, 0.5);
   color: #e2e2e2;
+  font-size: larger;
 }
 
 a {
@@ -10,6 +11,10 @@ a {
 }
 
 .table{
-  margin: 120px 0px; 
+  margin: 25px 0px; 
   
+}
+
+button {
+  margin-right: 25px;
 }
