@@ -11,7 +11,13 @@ export class BuscarClienteService extends HttpClient {
   constructor() {
     super('http://localhost:3000/');
   }
+
+  private setToken() {
+  this.instance.defaults.headers["Authorization"] = `Bearer ${localStorage.getItem(`token`)!}`
+  }
+
   async listarUsuarios(): Promise<Usuario[]> {
+    this.setToken()
     return (await this.instance.get<Usuario[]>('auth'));
   }
   async buscarPorCodigo(codigo: number): Promise<Usuario> {
