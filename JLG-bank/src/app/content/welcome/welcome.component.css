@@ -1,0 +1,33 @@
+.container {
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+}
+
+.box-tile {
+    padding: 80px 10px;
+    margin: 0px auto;
+}
+
+#logo {
+    max-width: 515px;
+}
+
+h1 {
+    padding-left: 10px;
+}
+
+p {
+    font-size: 30px;
+    text-align: center;
+    font-weight: bolder;
+    padding: 15px 0px 5px;
+}
+
+h1:hover, p:hover {
+    text-shadow: -0.5px 0.5px 1px rgba(255, 255, 255, 0.7);
+}
+
+#seg {
+    text-align: end;
+}

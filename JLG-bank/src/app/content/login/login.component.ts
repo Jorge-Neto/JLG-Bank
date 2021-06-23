@@ -47,6 +47,7 @@ export class LoginComponent implements OnInit {
       return this.router.navigate(['/admin']);
     } else if (permissao === 'standard') {
       return this.router.navigate(['/welcome']);
+      
     } else {
       return this.erroLogin = true;
     }
