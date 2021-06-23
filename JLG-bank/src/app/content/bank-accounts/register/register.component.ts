@@ -16,8 +16,7 @@ export class RegisterComponent implements OnInit {
   // conta: string;
   usuario: Usuario;
 
-  constructor(private service: BuscarClienteService,
-    private router: Router) {
+  constructor(private service: BuscarClienteService, private router: Router) {
     this.usuario = {} as Usuario;
   }
 
@@ -26,11 +25,11 @@ export class RegisterComponent implements OnInit {
   }
 
   registrarUsuario(usuario: Usuario) {
-    this.usuario.privilegio = "standard";
+    this.usuario.privilegio = 'standard';
     this.service.criarUsuario(usuario).then(() => {
       console.log(`${usuario.nome} criado!`);
       this.router.navigate(['/admin']);
-    })
+    });
   }
 
 }

@@ -14,8 +14,16 @@
                         placeholder="********" required>
                 </div>
                 <br>
+                <div *ngIf="erroLogin" class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>Erro!</strong> Login não encontrado. Tente novamente ou <a routerLink="/bank-accounts">Registre-se</a>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="closeAlert()">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <br>
                 <div>
-                    <button type="button submit" [disabled]="!formLogin.valid" class="btn btn-success" id="login">Login</button>
+                    <button type="button submit" [disabled]="!formLogin.valid" class="btn btn-success"
+                        id="login">Login</button>
                 </div>
                 <div class="container">
                     <p>Não tem uma conta?</p>

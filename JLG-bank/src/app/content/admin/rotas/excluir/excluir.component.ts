@@ -12,8 +12,7 @@ export class ExcluirComponent implements OnInit {
 
   usuario: Usuario;
 
-  constructor(private service: BuscarClienteService,
-    private router: Router, private route: ActivatedRoute) {
+  constructor(private service: BuscarClienteService, private router: Router, private route: ActivatedRoute) {
     this.usuario = {} as Usuario;
   }
 
@@ -29,6 +28,4 @@ export class ExcluirComponent implements OnInit {
       this.router.navigate(['/admin']);
     });
   }
-
-
 }

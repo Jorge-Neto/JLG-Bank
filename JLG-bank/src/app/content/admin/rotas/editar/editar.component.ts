@@ -11,21 +11,20 @@ import { Usuario } from 'src/app/content/dados/user';
 })
 export class EditarComponent implements OnInit {
 
-  usuario : Usuario;
+  usuario: Usuario;
 
-  constructor(private service : BuscarClienteService,
-      private router: Router, private route : ActivatedRoute) { 
+  constructor(private service: BuscarClienteService, private router: Router, private route: ActivatedRoute) {
     this.usuario = {} as Usuario;
   }
 
   ngOnInit(): void {
     const str = this.route.snapshot.paramMap.get('id');
-    this.service.buscarPorCodigo(Number(str)).then( usuario => {
+    this.service.buscarPorCodigo(Number(str)).then(usuario => {
       this.usuario = usuario;
     });
   }
 
-  atualizar(usuario : Usuario) {
+  atualizar(usuario: Usuario) {
     this.service.atualizarUsuario(usuario).then(() => {
       this.router.navigate(['/admin']);
     });

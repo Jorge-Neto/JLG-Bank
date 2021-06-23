@@ -1,11 +1,11 @@
-import { Component, Injectable, OnInit, EventEmitter } from '@angular/core';
+import { Component, Injectable, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 
 import { AuthService } from './../../auth/auth.service';
 
-@Injectable({providedIn: 'root'})
+@Injectable({ providedIn: 'root' })
 
 @Component({
   selector: 'app-login',
@@ -13,8 +13,6 @@ import { AuthService } from './../../auth/auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
-  static emitirClienteCriado = new EventEmitter<string>();
 
   formLogin: FormGroup;
 
@@ -28,21 +26,34 @@ export class LoginComponent implements OnInit {
 
   }
 
+  erroLogin: boolean;
+
   ngOnInit(): void {
+    localStorage.setItem(`Privilegio`, '');
+    this.erroLogin = false;
   }
 
   onSubmit() {
-    const dadoEmail = this.formLogin.value.email
-    const dadoSenha = this.formLogin.value.senha
-    LoginComponent.emitirClienteCriado.emit(dadoEmail);
+    const dadoEmail = this.formLogin.value.email;
+    const dadoSenha = this.formLogin.value.senha;
+    if (dadoEmail == null || dadoSenha == null) {
+      return this.erroLogin = true;
+    }
 
-    const token = this.service.login(dadoEmail, dadoSenha);
-    console.log(token);
+    this.service.login(dadoEmail, dadoSenha);
+    const permissao = localStorage.getItem(`Privilegio`);
 
-    // if (!token) {
-    //   alert("É necessário fornecer dados para login");
-    // };
-      this.router.navigate(['/admin']);
+    if (permissao === 'adm') {
+      return this.router.navigate(['/admin']);
+    } else if (permissao === 'standard') {
+      return this.router.navigate(['/welcome']);
+    } else {
+      return this.erroLogin = true;
+    }
+  }
+
+  closeAlert() {
+    this.erroLogin = false;
   }
 
   pageRgstr() {

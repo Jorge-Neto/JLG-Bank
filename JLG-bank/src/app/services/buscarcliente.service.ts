@@ -13,11 +13,11 @@ export class BuscarClienteService extends HttpClient {
   }
 
   private setToken() {
-  this.instance.defaults.headers["Authorization"] = `Bearer ${localStorage.getItem(`token`)!}`
+  this.instance.defaults.headers['Authorization'] = `Bearer ${localStorage.getItem(`token`)!}`;
   }
 
   async listarUsuarios(): Promise<Usuario[]> {
-    this.setToken()
+    this.setToken();
     return (await this.instance.get<Usuario[]>('auth'));
   }
   async buscarPorCodigo(codigo: number): Promise<Usuario> {
@@ -27,7 +27,7 @@ export class BuscarClienteService extends HttpClient {
     return (await this.instance.post<Usuario>('auth', usuario));
   }
   async atualizarUsuario(usuario: Usuario): Promise<Usuario> {
-    let codigo = usuario.codigo;
+    const codigo = usuario.codigo;
     return (await this.instance.put<Usuario>(`auth/${codigo}`, usuario));
   }
   async excluir(codigo: number): Promise<Usuario> {

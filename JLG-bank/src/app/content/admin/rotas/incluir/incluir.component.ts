@@ -15,8 +15,7 @@ export class IncluirComponent implements OnInit {
 
   usuario: Usuario;
 
-  constructor(private service: BuscarClienteService,
-    private router: Router) {
+  constructor(private service: BuscarClienteService, private router: Router) {
     this.usuario = {} as Usuario;
   }
 
